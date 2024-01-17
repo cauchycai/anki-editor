@@ -1009,8 +1009,8 @@ Return a list of cons of (FIELD-NAME . FIELD-CONTENT)."
   (anki-editor-api-check)
   (add-hook 'org-property-allowed-value-functions
 	    #'anki-editor--get-allowed-values-for-property nil t)
-  (advice-add 'org-set-tags :before #'anki-editor--before-set-tags)
-  (advice-add 'org-get-buffer-tags :around #'anki-editor--get-buffer-tags)
+  ;;(advice-add 'org-set-tags :before #'anki-editor--before-set-tags)
+  ;;(advice-add 'org-get-buffer-tags :around #'anki-editor--get-buffer-tags)
   (advice-add 'org-html-link :around #'anki-editor--ox-html-link))
 
 (defun anki-editor-teardown-minor-mode ()
